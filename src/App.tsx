@@ -300,6 +300,7 @@ class App extends React.Component<any, any> {
 
     // gasPrice
     const gasPrices = await apiGetGasPrices();
+    await new Promise(resolve => setTimeout(resolve, 0));
     const _gasPrice = gasPrices.slow.price;
     const gasPrice = sanitizeHex(convertStringToHex(convertAmountToRawNumber(_gasPrice, 9)));
 
